@@ -1,0 +1,32 @@
+
+Ping Test started at: 2024-11-25 15:07:01
+youtube.com
+2024-11-25 15:07:01 - Reply from 216.58.208.110: time=0.0128 seconds.
+2024-11-25 15:07:01 - Reply from 216.58.208.110: time=0.0132 seconds.
+2024-11-25 15:07:01 - Reply from 216.58.208.110: time=0.0127 seconds.
+
+dnsbelgium.be
+2024-11-25 15:07:01 - Reply from 45.60.74.42: time=0.0176 seconds.
+2024-11-25 15:07:01 - Reply from 45.60.74.42: time=0.0205 seconds.
+2024-11-25 15:07:01 - Reply from 45.60.74.42: time=0.0174 seconds.
+
+8.8.8.8
+2024-11-25 15:07:01 - Reply from 8.8.8.8: time=0.0124 seconds.
+2024-11-25 15:07:01 - Reply from 8.8.8.8: time=0.0126 seconds.
+2024-11-25 15:07:01 - Reply from 8.8.8.8: time=0.0133 seconds.
+
+1.1.1.1
+!!! 2024-11-25 15:07:01 - Reply from 1.1.1.1: time=0.1884 seconds.
+!!! 2024-11-25 15:07:01 - Reply from 1.1.1.1: time=0.1878 seconds.
+!!! 2024-11-25 15:07:02 - Reply from 1.1.1.1: time=0.1886 seconds.
+
+205.251.242.103
+!! 2024-11-25 15:07:02 - Reply from 205.251.242.103: time=0.0927 seconds.
+!! 2024-11-25 15:07:02 - Reply from 205.251.242.103: time=0.0917 seconds.
+!! 2024-11-25 15:07:02 - Reply from 205.251.242.103: time=0.0916 seconds.
+
+13.107.246.40
+!!! 2024-11-25 15:07:06 - Request to 13.107.246.40 failed.
+!!! 2024-11-25 15:07:10 - Request to 13.107.246.40 failed.
+!!! 2024-11-25 15:07:14 - Request to 13.107.246.40 failed.
+

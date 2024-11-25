@@ -11,7 +11,7 @@ DONE
 -> Send a ping
 -> Write away the end result
 
-
+Single ones:
 
 ping_one_at_a_time:
 For client:
@@ -20,20 +20,35 @@ For client:
 - Give a timestamp of when the ping was completed DONE
 DONE
 
-ping_timestamp as filename
+ping_timestamp_from_file:
 For client:
 - it will use the current date and time for the filename, with the hostname/IP address
 DONE
 
-ping_multiple_from_file:
+
+Multiple ones at a time:
+
+ping_multiple_txt:
 Create a separate one for multiple IP addresses/clients
 - Input a txt file
 - It will go through the list and print the result in a txt file.
+    - Colour coding for succesful attempts:
+        OK, latency lower than 50ms -> nothing will be added
+        OK, latency between 50ms and 150ms -> !! will be added in front
+        No response or latency above 150ms -> !!! will be added in front
+OK
+
+ping_multiple_excel:
+Create a separate one for multiple IP addresses/clients
+- Input a txt file/csv file
 - Get the output into a specific file, maybe a csv/excel file?
     - Colour coding for succesful attempts:
-        OK, latency lower than 50ms -> green
-        OK, latency between 50ms and 150ms -> orange
-        No response or latency above 150ms -> red
+        OK, latency lower than 50ms -> nothing will be added
+        OK, latency between 50ms and 150ms -> !! will be added in front
+        No response or latency above 150ms -> !!! will be added in front
+
+
+For router/switch specifically:
 
 For switch/router:
 - Lookup MAC addresses of the hostnames, show to the user
