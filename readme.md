@@ -1,3 +1,5 @@
+Project has been completed, mostly with chatGPT
+
 Main objective of this project:
 
 1. Create a ping request from your device to an IP address
