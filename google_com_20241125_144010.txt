@@ -1,0 +1,7 @@
+
+Ping started at: 2024-11-25 14:40:18
+Reply from 172.217.23.206: time=0.0133 seconds.
+Reply from 172.217.23.206: time=0.0127 seconds.
+Reply from 172.217.23.206: time=0.0122 seconds.
+Reply from 172.217.23.206: time=0.0137 seconds.
+Reply from 172.217.23.206: time=0.0122 seconds.

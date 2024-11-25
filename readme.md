@@ -23,7 +23,7 @@ DONE
 ping_timestamp as filename
 For client:
 - it will use the current date and time for the filename, with the hostname/IP address
-
+DONE
 
 ping_multiple_from_file:
 Create a separate one for multiple IP addresses/clients
