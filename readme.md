@@ -1,15 +1,8 @@
-2 Things for this project:
+Main objective of this project:
 
 1. Create a ping request from your device to an IP address
 -> Ping a device
 -> Write away the end result in a file 
-DONE
-
-
-2. Create a ping request from a switch to an IP address
--> Log into the switch/router
--> Send a ping
--> Write away the end result
 
 Single ones:
 
@@ -59,17 +52,4 @@ Create a separate one for multiple IP addresses/clients
         OK, latency lower than 50ms -> give the cell a green font
         OK, latency between 50ms and 150ms -> give the cell an orange font
         No response or latency above 150ms -> give the cell a red font
-
-
-For router/switch specifically:
-
-For switch/router:
-- Lookup MAC addresses of the hostnames, show to the user
-- Give the option to ping for multiple multiple ping requests
-    - Do a lookup for the first half, to see who is the vendor, what kind of device is connected
-- Give it a file so it can go trough the list
-- Get the output into a specific file, maybe a csv/excel file?
-    - Colour coding for succesful attempts:
-        OK, latency lower than 50ms -> green
-        OK, latency between 50ms and 400ms -> orange
-        No response or latency above 400ms -> red
+DONE
