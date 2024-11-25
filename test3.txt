@@ -1,0 +1,7 @@
+Resolved facebook.com to 179.60.195.36.
+Pinging 179.60.195.36 with 5 requests...
+Reply from 179.60.195.36: time=0.0128 seconds.
+Reply from 179.60.195.36: time=0.0088 seconds.
+Reply from 179.60.195.36: time=0.0087 seconds.
+Reply from 179.60.195.36: time=0.0084 seconds.
+Reply from 179.60.195.36: time=0.0087 seconds.

@@ -1,7 +1,8 @@
-Resolved github.com to 140.82.121.3.
-Pinging 140.82.121.3 with 5 requests...
-Reply from 140.82.121.3: time=0.0178 seconds.
-Reply from 140.82.121.3: time=0.0173 seconds.
-Reply from 140.82.121.3: time=0.0174 seconds.
-Reply from 140.82.121.3: time=0.0173 seconds.
-Reply from 140.82.121.3: time=0.0172 seconds.
+
+
+Ping started at: 2024-11-25 14:36:44
+Reply from 8.8.8.8: time=0.0122 seconds.
+Reply from 8.8.8.8: time=0.0118 seconds.
+Reply from 8.8.8.8: time=0.0115 seconds.
+Reply from 8.8.8.8: time=0.0225 seconds.
+Reply from 8.8.8.8: time=0.0124 seconds.
