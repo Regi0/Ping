@@ -2,7 +2,8 @@
 
 1. Create a ping request from your device to an IP address
 -> Ping a device
--> Write away the end result
+-> Write away the end result in a file 
+DONE
 
 
 2. Create a ping request from a switch to an IP address
@@ -14,9 +15,12 @@
 
 Extra features:
 For client:
-- Use hostnames, give IP address as well, with nslookup
-- Give the option to ping for multiple multiple ping requests
-- Give it a file so it can go trough the list
+- Use hostnames, give IP address as well, with nslookup DONE
+- Give the option to ping for multiple ping requests DONE
+
+Create a separate one for multiple IP addresses/clients
+- Input a txt file
+- It will go through the list and print the result in a txt file.
 - Get the output into a specific file, maybe a csv/excel file?
     - Colour coding for succesful attempts:
         OK, latency lower than 50ms -> green

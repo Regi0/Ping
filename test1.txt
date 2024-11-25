@@ -1,0 +1,7 @@
+Resolved github.com to 140.82.121.3.
+Pinging 140.82.121.3 with 5 requests...
+Reply from 140.82.121.3: time=0.0178 seconds.
+Reply from 140.82.121.3: time=0.0173 seconds.
+Reply from 140.82.121.3: time=0.0174 seconds.
+Reply from 140.82.121.3: time=0.0173 seconds.
+Reply from 140.82.121.3: time=0.0172 seconds.
