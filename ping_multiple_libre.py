@@ -3,6 +3,7 @@ from ping3 import ping
 from datetime import datetime
 import openpyxl
 from openpyxl.styles import PatternFill
+import os
 
 # Function to resolve hostname to IP
 def resolve_hostname(hostname):
@@ -37,22 +38,30 @@ def create_spreadsheet(results, output_filename):
     ws.title = "Ping Results"
 
     # Write headers
-    headers = ["Host/IP", "Latency (ms)", "Status"]
+    headers = ["Host/IP", "Resolved IP", "Pings Sent", "Average Latency (ms)", "Status"]
     ws.append(headers)
 
     # Write ping results
     for result in results:
-        host_ip, latencies = result
-        average_latency = sum([latency for latency in latencies if latency is not None]) / len(latencies)
-        status = "OK" if average_latency <= 0.150 else "Failed"
+        host_ip, latencies, resolved_ip, ping_count = result
+        
+        # Remove None values for latencies that failed
+        valid_latencies = [latency for latency in latencies if latency is not None]
+        
+        if valid_latencies:
+            average_latency = sum(valid_latencies) / len(valid_latencies)
+        else:
+            average_latency = None
+        
+        status = "OK" if average_latency is not None and average_latency <= 0.150 else "Failed"
 
-        # Write the host/IP, average latency, and status
-        row = [host_ip, f"{average_latency:.4f}", status]
+        # Write the host/IP, resolved IP, number of pings sent, average latency, and status
+        row = [host_ip, resolved_ip if resolved_ip else "N/A", ping_count, f"{average_latency:.4f}" if average_latency is not None else "No Response", status]
         ws.append(row)
 
-        # Apply color to the latency cell based on the value
+        # Apply color to the average latency cell based on the value
         color = get_color_for_latency(average_latency)
-        latency_cell = ws.cell(row=ws.max_row, column=2)
+        latency_cell = ws.cell(row=ws.max_row, column=4)  # Column for average latency
         latency_cell.fill = color
 
     # Save the workbook
@@ -84,18 +93,22 @@ def main():
     results = []
     for host in hosts:
         host = host.strip()  # Remove extra whitespace/newlines
+        resolved_ip = None
         if not host.replace('.', '').isdigit():  # If it's a hostname
-            ip_address = resolve_hostname(host)
-            if ip_address:
-                latencies = ping_target(ip_address, count)
-                results.append((host, latencies))
+            resolved_ip = resolve_hostname(host)
+            if resolved_ip:
+                latencies = ping_target(resolved_ip, count)
+                results.append((host, latencies, resolved_ip, count))
         else:  # If it's an IP address
             latencies = ping_target(host, count)
-            results.append((host, latencies))
+            results.append((host, latencies, host, count))
 
-    # Step 4: Create the Excel file
+    # Step 4: Create the Excel file with the new naming convention
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_filename = f"ping_results_{timestamp}.xlsx"
+    base_filename = os.path.splitext(os.path.basename(input_file))[0]  # Get the name of the input file without extension
+    output_filename = f"ping_results_{base_filename}_{timestamp}.xlsx"
+    
+    # Create the spreadsheet and save it
     create_spreadsheet(results, output_filename)
 
 if __name__ == "__main__":

@@ -42,16 +42,18 @@ TO DO:
 
 ping_multiple_libre:
 Create a separate one for multiple IP addresses/clients
-- Input a txt file or a libreoffice file
-- Get the output into a libreoffice math file:
+- Input a txt file
+- Get the output into a libreoffice math/excel file:
     - Colour coding for attempts:
         OK, latency lower than 50ms -> give the cell a green font
         OK, latency between 50ms and 150ms -> give the cell an orange font
         No response or latency above 150ms -> give the cell a red font
+DONE
+
 
 ping_multiple_excel:
 Create a separate one for multiple IP addresses/clients
-- Input a txt file or a CSV/Excel file
+- Input a CSV/Excel file
 - Get the output into a CSV/Excel file:
     - Colour coding for attempts:
         OK, latency lower than 50ms -> give the cell a green font
